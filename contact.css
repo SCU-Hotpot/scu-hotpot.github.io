@@ -1,0 +1,92 @@
+body.contact-background {
+    background: linear-gradient(120deg, #89eefe, #6482fc, #89eefe);
+    background-size: 200% 200%;
+    animation: gradient-animation 10s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.contact-page {
+    padding: 5rem 2rem;
+    text-align: center;
+    min-height: 60vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent overlay */
+    border-radius: 10px;
+    margin: 2rem;
+}
+
+.contact-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-title-icon {
+    height: 2.5rem;
+}
+
+.contact-page h1 {
+    font-size: 2.5rem;
+}
+
+.contact-page p {
+    font-size: 1.1rem;
+    color: #aaa;
+    margin-bottom: 2rem;
+}
+
+.mail-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.mail-button:hover {
+    background-color: #0056b3;
+}
+
+.address-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.address-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.location-icon {
+    height: 1.3rem;
+}
+
+.address-info {
+    font-size: 1.0rem;
+    color: #ccc;
+    margin: 1.5rem 0;
+}
+
+.welcome-text {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 2rem;
+}

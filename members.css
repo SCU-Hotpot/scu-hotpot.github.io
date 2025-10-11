@@ -1,0 +1,98 @@
+.members-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: rgba(10, 10, 10, 0.7);
+    border-radius: 10px;
+}
+
+.members-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 1.5rem;
+}
+
+.members-header .main-title {
+    margin: 0;
+}
+
+.filters {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.filter-group label {
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+#season-select {
+    background-color: #2a2a2a;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 6px;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+}
+
+#season-select:focus {
+    outline: none;
+    border-color: #58a6ff;
+}
+
+#members-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#members-list hr {
+    border: none;
+    border-top: 1px solid #333;
+    margin: 1rem 0;
+}
+
+.member-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.member-card {
+    padding: 1rem;
+    text-align: center;
+    width: 18%; /* 100% / 5 columns = 20%, minus some gap */
+    max-width: 180px;
+}
+
+.member-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1rem;
+    border: 3px solid #444;
+}
+
+.member-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+}
+
+.member-major, .member-responsibility {
+    color: #aaa;
+    font-size: 0.8rem;
+    margin-top: 0.4rem;
+}

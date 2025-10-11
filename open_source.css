@@ -1,0 +1,104 @@
+/* Styles for the open source projects page will go here. */
+
+.projects-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: rgba(10, 10, 10, 0.7); /* Semi-transparent dark background */
+    border-radius: 10px;
+}
+
+.projects-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+.projects-header h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+#repo-search-input {
+    padding: 0.5rem 1rem;
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    width: 300px; /* Adjust width as needed */
+    transition: all 0.3s ease;
+}
+
+#repo-search-input:focus {
+    outline: none;
+    border-color: #58a6ff;
+    background-color: #1c1c1c;
+}
+
+.project-card {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-repo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.repo-icon {
+    height: 1.2rem;
+}
+
+.project-repo a {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #58a6ff;
+    text-decoration: none;
+}
+
+.project-repo a:hover {
+    text-decoration: underline;
+}
+
+.project-description {
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.project-meta {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.language-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #f1e05a; /* Default to JavaScript color */
+}
+
+.language-color.python {
+    background-color: #3572A5;
+}
+
+.language-color.html {
+    background-color: #e34c26;
+}

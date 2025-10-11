@@ -1,0 +1,251 @@
+html {
+    scroll-behavior: smooth;
+    background-color: #000; /* 设置全局背景色以统一滚动边界外的颜色 */
+}
+
+body {
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0a0a0a; /* 设置为不透明背景以覆盖动画 */
+    padding: 0.5rem 2rem;
+    border-bottom: 1px solid #333;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo img {
+    /* The height will be set on specific classes */
+}
+
+.logo-icon {
+    height: 4rem;
+}
+
+.logo-text-en {
+    height: 28px;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.intro {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    padding: 0;
+    border-bottom: 1px solid #333;
+}
+
+#bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.intro-content {
+    position: relative;
+    z-index: 1;
+}
+
+.intro-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 1.5rem;
+}
+
+.intro-logos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.intro-logos img {
+    /* height will be set on specific classes */
+}
+
+.intro-logo-main {
+    height: 160px;
+}
+
+.intro-logo-zh {
+    height: 120px;
+}
+
+.team-intro {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #0a0a0a;
+}
+
+.team-intro h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.team-intro p {
+    font-size: 1.1rem;
+    color: #aaa;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+}
+
+footer {
+    text-align: center;
+    padding: 3rem 1rem;
+    border-top: 1px solid #333;
+    background-color: #0a0a0a;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.school-logo img {
+    height: 60px; /* Adjust as needed */
+}
+
+.sponsors-footer {
+    margin-top: 1rem;
+}
+
+.school-logo h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #ccc;
+}
+
+.sponsors-footer h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #ccc;
+}
+
+.sponsors-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.sponsors-list img {
+    height: 40px; /* Adjust as needed */
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.sponsors-list img:hover {
+    opacity: 1;
+}
+
+.banners {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 1rem;
+}
+
+.banner {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 30%;
+    max-width: 400px;
+}
+
+.banner a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}
+
+.banner img {
+    width: 100%;
+    display: block;
+}
+
+.banner h3 {
+    font-size: 1.5rem;
+    margin: 1rem 1.5rem 0.5rem;
+}
+
+.banner p {
+    font-size: 1rem;
+    color: #aaa;
+    margin: 0 1.5rem 1.5rem;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.contact-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    border: 1px solid #555;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.contact-btn:hover {
+    background-color: #333;
+}
+
+.contact-btn img {
+    height: 20px;
+}
+
+.contact-btn span {
+    font-size: 0.9rem;
+}
+
+

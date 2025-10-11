@@ -1,0 +1,137 @@
+.schedule-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: rgba(10, 10, 10, 0.7); /* Semi-transparent dark background */
+    border-radius: 10px;
+}
+
+.main-title {
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-align: left;
+    margin: 0;
+    color: #fff;
+}
+
+.schedule-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 1.5rem;
+}
+
+.filters {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.filter-group label {
+    font-size: 1.1rem; /* Increased font size */
+    color: #ccc;
+}
+
+#year-select, #opponent-search {
+    background-color: #2a2a2a;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 6px;
+    padding: 0.6rem 1rem; /* Increased padding */
+    font-size: 1rem; /* Increased font size */
+}
+
+#year-select:focus, #opponent-search:focus {
+    outline: none;
+    border-color: #58a6ff;
+}
+
+.match-card {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+    color: #ccc; /* Light text color for dark background */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.match-header {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.match-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.match-time-link {
+    font-size: 1rem;
+    color: #888;
+}
+
+.match-time-link a {
+    color: #007bff;
+    text-decoration: none;
+    margin-left: 0.5rem;
+}
+
+.match-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #ff8a8a, #6a6aff);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.team {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    flex: 1;
+    color: #fff;
+}
+
+.team.red {
+    justify-content: flex-start;
+}
+
+.team.blue {
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.team-logo {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    padding: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.match-score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.score-colon {
+    margin: 0 1rem;
+}
