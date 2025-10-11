@@ -146,7 +146,7 @@ footer {
     height: 60px; /* Adjust as needed */
 }
 
-.sponsors-footer {
+.partners-footer {
     margin-top: 1rem;
 }
 
@@ -156,26 +156,26 @@ footer {
     color: #ccc;
 }
 
-.sponsors-footer h3 {
+.partners-footer h3 {
     font-size: 1.2rem;
     margin-bottom: 1rem;
     color: #ccc;
 }
 
-.sponsors-list {
+.partners-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1.5rem;
 }
 
-.sponsors-list img {
+.partners-list img {
     height: 40px; /* Adjust as needed */
     opacity: 0.8;
     transition: opacity 0.3s;
 }
 
-.sponsors-list img:hover {
+.partners-list img:hover {
     opacity: 1;
 }
 
