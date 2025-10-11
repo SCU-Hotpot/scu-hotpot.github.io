@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const seasonSelect = document.getElementById('season-select');
     const membersList = document.getElementById('members-list');
 
-    const MANAGEMENT_ROLES = ["副队长", "项目管理", "视觉导航组长", "机械组长", "硬件组长", "电控组长", "运营组长","质量管理"];
+    const MANAGEMENT_ROLES = ["副队长", "项目管理", "视觉导航组长", "机械组长", "硬件组长", "电控组长", "运营组长", "质量管理", "顾问"];
 
     async function fetchAndParseCSV(season) {
         const CSV_PATH = `source/members/${season}/members.csv`;
