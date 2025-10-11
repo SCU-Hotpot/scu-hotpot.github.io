@@ -142,6 +142,13 @@ footer {
     gap: 2rem;
 }
 
+.school-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
 .school-logo img {
     height: 60px; /* Adjust as needed */
 }
