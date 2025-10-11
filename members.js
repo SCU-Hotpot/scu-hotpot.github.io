@@ -38,18 +38,21 @@ document.addEventListener('DOMContentLoaded', async () => {
         membersList.innerHTML = '';
         if (membersData.length === 0) return;
 
+        const teacher = membersData.filter(m => m.post === '指导老师');
         const captain = membersData.filter(m => m.post === '队长');
         const management = membersData.filter(m => MANAGEMENT_ROLES.includes(m.post));
-        const regularMembers = membersData.filter(m => m.post !== '队长' && !MANAGEMENT_ROLES.includes(m.post));
+        const regularMembers = membersData.filter(m => m.post !== '指导老师' && m.post !== '队长' && !MANAGEMENT_ROLES.includes(m.post));
 
-        // Render Captain
-        if (captain.length > 0) {
-            const captainRow = createMemberRow(captain, seasonSelect.value);
-            membersList.appendChild(captainRow);
+        const leadership = [...teacher, ...captain];
+
+        // Render Teacher and Captain
+        if (leadership.length > 0) {
+            const leadershipRow = createMemberRow(leadership, seasonSelect.value);
+            membersList.appendChild(leadershipRow);
         }
 
         // Add separator
-        if (captain.length > 0 && (management.length > 0 || regularMembers.length > 0)) {
+        if (leadership.length > 0 && (management.length > 0 || regularMembers.length > 0)) {
             const separator = document.createElement('hr');
             membersList.appendChild(separator);
         }
@@ -82,11 +85,12 @@ document.addEventListener('DOMContentLoaded', async () => {
             card.className = 'member-card';
             const photoPath = `source/members/${season}/队员照片/${member.name}.png`;
             
-            const isLeadership = member.post === '队长' || MANAGEMENT_ROLES.includes(member.post);
+            const isLeadership = member.post === '队长' || member.post === '指导老师' || MANAGEMENT_ROLES.includes(member.post);
             const thirdLineContent = isLeadership ? member.post : member.responsibility;
+            const photoClass = member.post === '指导老师' ? 'member-photo teacher-photo' : 'member-photo';
 
             card.innerHTML = `
-                <img src="${photoPath}" alt="${member.name}" class="member-photo" onerror="this.src='source/logo/color_logo.png'; this.style.border='none';">
+                <img src="${photoPath}" alt="${member.name}" class="${photoClass}" onerror="this.src='source/logo/color_logo.png'; this.style.border='none';">
                 <h3 class="member-name">${member.name}</h3>
                 <p class="member-major">${member.college} - ${member.major}</p>
                 <p class="member-responsibility">${thirdLineContent}</p>
