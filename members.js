@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const seasonSelect = document.getElementById('season-select');
     const membersList = document.getElementById('members-list');
 
-    const MANAGEMENT_ROLES = ["副队长", "项目管理", "视觉导航组长", "机械组长", "硬件组长", "电控组长", "运营组长", "质量管理", "顾问"];
+    const MANAGEMENT_ROLES = ["队长","副队长", "项目管理", "视觉导航组长", "机械组长", "硬件组长", "电控组长", "运营组长", "质量管理", "顾问"];
 
     async function fetchAndParseCSV(season) {
         const CSV_PATH = `source/members/${season}/members.csv`;
@@ -39,13 +39,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (membersData.length === 0) return;
 
         const teacher = membersData.filter(m => m.post === '指导老师');
-        const captain = membersData.filter(m => m.post === '队长');
         const management = membersData.filter(m => MANAGEMENT_ROLES.includes(m.post));
-        const regularMembers = membersData.filter(m => m.post !== '指导老师' && m.post !== '队长' && !MANAGEMENT_ROLES.includes(m.post));
+        const regularMembers = membersData.filter(m => m.post !== '指导老师' && !MANAGEMENT_ROLES.includes(m.post));
 
-        const leadership = [...teacher, ...captain];
+        const leadership = [...teacher];
 
-        // Render Teacher and Captain
+        // Render Teacher
         if (leadership.length > 0) {
             const leadershipRow = createMemberRow(leadership, seasonSelect.value);
             membersList.appendChild(leadershipRow);
