@@ -307,6 +307,37 @@ footer {
     box-sizing: border-box;
 }
 
+.speech-bubble {
+    position: absolute;
+    opacity: 0; /* Initially hidden */
+    z-index: 10; /* Ensure bubble is on top of the logo layers */
+    left: 90px; /* Position it to the right of the logo */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    white-space: nowrap; /* Prevent text from wrapping */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Optional: Add a little tail to the bubble */
+.speech-bubble::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid rgba(255, 255, 255, 0.9);
+}
+
 /* Removed ::before pseudo-element for the new stagger effect */
 
 @keyframes fadeIn {
