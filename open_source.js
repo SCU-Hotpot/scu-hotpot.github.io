@@ -95,6 +95,8 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const results = await Promise.all(jsonPromises);
             allRepos = results.flat();
+            // Filter out the specific repo for GitHub Pages
+            allRepos = allRepos.filter(repo => repo.name !== 'scu-hotpot.github.io');
             allRepos.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
             
             renderRepos(allRepos);
