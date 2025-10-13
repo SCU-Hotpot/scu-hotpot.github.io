@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const schoolLogos = [
         '四川大学', '西南交通大学', '西南石油大学', '成都大学', 
         '成都工业学院', '成都信息工程大学', '重庆大学', '重庆理工大学', 
-        '三峡学院', '西南民族大学'
+        '三峡学院', '西南民族大学','电子科技大学成都学院','吉利学院','陆军勤务学院'
     ];
     
     const speechBubbles = [

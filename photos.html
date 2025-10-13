@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>战队图集 - 四川大学火锅战队</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="photos.css">
+    <link rel="icon" href="source/logo/color_logo.png" type="image/png">
+</head>
+<body class="contact-background">
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="source/logo/title_logo.png" alt="SCURM Color Logo" class="logo-icon">
+                </a>
+            </div>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="https://www.robomaster.com/zh-CN" target="_blank">赛事链接</a></li>
+                <li><a href="members.html">战队成员</a></li>
+                <li><a href="open_source.html">项目开源</a></li>
+                <li><a href="contact.html">联系我们</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="photos-container">
+            <div class="photos-header">
+                <h1 class="main-title">战队图集</h1>
+                <div id="photo-filters" class="filters">
+                    <div class="filter-group">
+                        <label for="season-select">赛季:</label>
+                        <select id="season-select"></select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="type-select">比赛类型:</label>
+                        <select id="type-select"></select>
+                    </div>
+                </div>
+            </div>
+            <div id="photos-grid">
+                <!-- Photos will be loaded here by JavaScript -->
+            </div>
+            <div id="more-photos-wrapper" class="more-photos-container">
+                <!-- "More Photos" button will be injected here or its href updated -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="school-logo">
+                <h3>机构单位</h3>
+                <a href="https://www.scu.edu.cn/" target="_blank">
+                    <img src="source/logo/scu_logo.png" alt="scu Logo" id="scu-logo-main">
+                </a>
+                <a href="https://msec.scu.edu.cn/" target="_blank">
+                    <img src="source/logo/me.png" alt="me Logo">
+                </a>
+                <a href="http://ee.scu.edu.cn/" target="_blank">
+                    <img src="source/logo/ee.png" alt="ee Logo">
+                </a>
+            </div>
+            <div class="partners-footer">
+                <h3>合作伙伴</h3>
+                <div class="partners-list">
+                    <a href="https://bambulab.com/zh">
+                        <img src="source/partners/bambu_lab.png" alt="Bambu Lab">
+                    </a>
+                    <a href="https://mp.weixin.qq.com/s/0UuR9th292TXjF8UEMRgrQ">
+                        <img src="source/partners/stem.png" alt="stem">
+                    </a>
+                    <a href="https://www.hqchip.com/">
+                        <img src="source/partners/huaqiu.png" alt="Huaqiu">
+                    </a>
+                    <a href="https://www.cuav.net/">
+                        <img src="source/partners/cuav.png" alt="cuav">
+                    </a>
+                    <a href="https://www.richbeam.com/">
+                        <img src="source/partners/richbeam.png" alt="Richbeam">
+                    </a>
+                    <a href="https://orbbec.com.cn/">
+                        <img src="source/partners/orb.png" alt="orb">
+                    </a>
+                </div>
+                <p>（以上排名不分先后）</p>
+            </div>
+            <p>© 2025 四川大学RoboMaster火锅战队. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="photos.js"></script>
+</body>
+</html>

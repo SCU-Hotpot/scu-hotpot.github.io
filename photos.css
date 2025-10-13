@@ -1,0 +1,124 @@
+.photos-container {
+    max-width: 1200px; /* Adjusted max-width */
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: rgba(10, 10, 10, 0.7);
+    border-radius: 10px;
+}
+
+.photos-header {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 1.5rem;
+}
+
+.photos-header .main-title {
+    margin: 0;
+}
+
+#photo-filters {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.photos-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.filter-group label {
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+#season-select, #type-select {
+    background-color: #2a2a2a;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 6px;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+}
+
+#season-select:focus, #type-select:focus {
+    outline: none;
+    border-color: #58a6ff;
+}
+
+#photos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.photo-card {
+    position: relative; /* Needed for absolute positioning of the button */
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.photo-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 4 / 3; /* Maintain a consistent aspect ratio */
+    object-fit: cover;
+}
+
+.download-btn {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 8px;
+    border-radius: 50%;
+    line-height: 0; /* Align SVG icon nicely */
+    transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.download-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.more-photos-container {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.more-photos-btn {
+    display: inline-block;
+    padding: 0.8rem 2.5rem;
+    background: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.more-photos-btn:hover {
+    background-color: #0069d9;
+}
+
+.more-photos-btn:active {
+    transform: scale(0.98);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
