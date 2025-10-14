@@ -150,11 +150,57 @@ footer {
     background-color: #0a0a0a;
 }
 
-.footer-content {
+.footer-main-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 2rem;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.footer-left, .footer-right {
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+}
+
+.footer-right {
+    align-items: center; /* Center the content within the right column */
+}
+
+.footer-divider {
+    width: 1px;
+    background-color: #444;
+    align-self: stretch;
+}
+
+.friendly-links {
+    margin-top: 1rem;
+}
+
+.friendly-links h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #ccc;
+}
+
+.links-list a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.links-list a:hover {
+    color: #fff;
+}
+
+.footer-copyright {
+    margin-top: 2rem;
+    color: #888;
+    font-size: 0.9rem;
 }
 
 .school-logo {
