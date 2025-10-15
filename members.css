@@ -115,3 +115,17 @@
     font-size: 0.8rem;
     margin-top: 0.4rem;
 }
+
+@media (max-width: 768px) {
+    .members-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.5rem;
+    }
+    .member-row {
+        justify-content: center;
+    }
+    .member-card {
+        width: 45%; /* Two columns on mobile */
+    }
+}

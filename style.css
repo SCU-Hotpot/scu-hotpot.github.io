@@ -70,6 +70,10 @@ nav ul li a {
     font-size: 1rem;
 }
 
+.menu-toggle {
+    display: none; /* Hidden by default on desktop */
+}
+
 .intro {
     position: relative;
     height: 100vh;
@@ -247,6 +251,11 @@ footer {
     opacity: 1;
 }
 
+.partners-footer p {
+    font-size: 0.8rem; /* Smaller font size */
+    color: #888;
+}
+
 .banners {
     display: flex;
     justify-content: center;
@@ -419,3 +428,67 @@ footer {
     }
 }
 
+/* --- Responsive Design for Mobile --- */
+@media (max-width: 768px) {
+    /* Header */
+    nav ul {
+        display: none; /* Hide nav links by default on mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        width: 100%;
+        background-color: #1a1a1a;
+        padding: 1rem 0;
+        z-index: 1000;
+    }
+    nav ul.active {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block; /* Show hamburger menu button */
+        cursor: pointer;
+        /* Basic hamburger icon styles */
+        width: 30px;
+        height: 25px;
+        position: relative;
+    }
+    .menu-toggle span {
+        display: block;
+        position: absolute;
+        height: 4px;
+        width: 100%;
+        background: #fff;
+        border-radius: 2px;
+        left: 0;
+        transition: transform 0.3s, opacity 0.3s;
+    }
+    .menu-toggle span:nth-child(1) { top: 0px; }
+    .menu-toggle span:nth-child(2) { top: 10px; }
+    .menu-toggle span:nth-child(3) { top: 20px; }
+
+
+    /* Footer */
+    .footer-main-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .footer-divider {
+        display: none;
+    }
+    .footer-right, .footer-left {
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Banners */
+    .banners {
+        flex-direction: column;
+        align-items: center;
+    }
+    .banner {
+        width: 90%;
+        max-width: 400px;
+    }
+}
