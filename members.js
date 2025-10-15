@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             const photoClass = member.post === '指导老师' ? 'member-photo teacher-photo' : 'member-photo';
 
             card.innerHTML = `
-                <img src="${photoPath}" alt="${member.name}" class="${photoClass}" onerror="this.src='source/logo/color_logo.png'; this.style.border='none';">
+                <img src="${photoPath}" alt="${member.name}" class="${photoClass}" loading="lazy" onerror="this.src='source/logo/color_logo.png'; this.style.border='none';">
                 <h3 class="member-name">${member.name}</h3>
                 <p class="member-major">${member.college} - ${member.major}</p>
                 <p class="member-responsibility">${thirdLineContent}</p>
