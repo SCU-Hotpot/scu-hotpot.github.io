@@ -91,20 +91,24 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
+    // jsDelivr CDN base URL for GitHub repository
+    const CDN_BASE = 'https://cdn.jsdelivr.net/gh/SCU-Hotpot/scu-hotpot.github.io@main';
+
     function createMemberRow(members, season) {
         const row = document.createElement('div');
         row.className = 'member-row';
         members.forEach(member => {
             const card = document.createElement('div');
             card.className = 'member-card';
-            const photoPath = `source/members/${season}/队员照片/${member.name}.png`;
+            const photoPath = `${CDN_BASE}/source/members/${season}/队员照片/${member.name}.png`;
+            const fallbackPhoto = `${CDN_BASE}/source/logo/color_logo.png`;
             
             const isLeadership = member.post === '队长' || member.post === '指导老师' || MANAGEMENT_ROLES.includes(member.post);
             const thirdLineContent = isLeadership ? member.post : member.responsibility;
             const photoClass = member.post === '指导老师' ? 'member-photo teacher-photo' : 'member-photo';
 
             card.innerHTML = `
-                <img src="${photoPath}" alt="${member.name}" class="${photoClass}" loading="lazy" onerror="this.src='source/logo/color_logo.png'; this.style.border='none';">
+                <img src="${photoPath}" alt="${member.name}" class="${photoClass}" loading="lazy" onerror="this.src='${fallbackPhoto}'; this.style.border='none';">
                 <h3 class="member-name">${member.name}</h3>
                 <p class="member-major">${member.college} - ${member.major}</p>
                 <p class="member-responsibility">${thirdLineContent}</p>
